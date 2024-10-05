@@ -1,0 +1,9 @@
+# Включение модуля перезаписи URL
+RewriteEngine On
+
+# Правило переписывания
+RewriteRule ^([0-9A-Za-z-]+)$ details.php?pro_id=$1 [QSA,NC,L]
+
+# Отключение отображения ошибок и предупреждений
+php_flag display_errors off
+php_value error_reporting 0
